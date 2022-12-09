@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sci_pai_task_02</title>
+</head>
+<body>
+    <script src="main.js"></script>
+    
+    <p> Oczko </p>
+    <p> Punkty: <span>0</span></p>
+
+    <przyciski>
+        <button type="button" what="add" onclick="sci.create()">Dobieram karte</button>
+        <button type="button" onclick="sci.clear()">Restart</button>
+        <button type="button"  onmouseover="sci.showPreview()" onmouseout="sci.hidePreview()">Podgląd</button>
+    </przyciski>
+    <br>
+    <cards></cards>
+    <nextCard></nextCard>
+    <br>
+
+    <table>
+        <tr>
+            <td>Lp.</td>
+            <td>Data</td>
+            <td>Punkty</td>
+        </tr>
+    </table>
+
+</body>
+</html>
