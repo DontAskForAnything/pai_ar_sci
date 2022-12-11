@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exam_00</title>
+</head>
+<body>
+
+    <button type="button" onclick='sci.event("prev")'>prev</button>
+    <div class="block"></div>
+    <button type="button" onclick='sci.event("next")'>next</button>
+
+<br>
+    
+    <input type="range" min="1" max="7" onchange="sci.rerender(event.target.value)">
+    <table id="WlasnyAtrybut"></table>
+
+
+    <script src="main.js"></script>
+    <style>
+    .block{
+        width:200px; height: 100px;
+    }
+    </style>
+</body>
+</html>
