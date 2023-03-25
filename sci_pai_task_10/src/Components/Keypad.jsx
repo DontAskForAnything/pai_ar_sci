@@ -1,11 +1,13 @@
 
 const Keypad = (props) => {
+  
     const handleButtonClick = (value) => {
       props.updateValue(value);
       };
+
     return ( 
     <div id="calculator">
-      <div className="btn-container">                
+      <div className="btn-container"> 
       <div className="row">
         <button className="btn" onClick={() => handleButtonClick("(")}>
           <div>{"("}</div>
@@ -13,10 +15,10 @@ const Keypad = (props) => {
         <button className="btn" onClick={() => handleButtonClick(")")}>
           <div>{")"}</div>
         </button>
-        <button className="btn" onClick={() => handleButtonClick("%")}>
-          <div>%</div>
+        <button className="btn" onClick={() => handleButtonClick("^")}>
+          <div>^</div>
         </button>
-        <button className="btn" onClick={() => handleButtonClick("÷")}>
+        <button className="btn" onClick={() => handleButtonClick("/")}>
           <div>÷</div>
         </button>            
       </div>
@@ -31,7 +33,7 @@ const Keypad = (props) => {
           <button className="btn" onClick={() => handleButtonClick(9)}>
             <div>9</div>
           </button>
-          <button className="btn" onClick={() => handleButtonClick('x')}>
+          <button className="btn" onClick={() => handleButtonClick('*')}>
               <div>×</div>
           </button>
         </div>
@@ -72,7 +74,7 @@ const Keypad = (props) => {
             <div>0</div>
           </button>
           <button className="btn"></button>
-          <button className="btn" id="result" onClick={() => props.randomValue(((Math.floor(Math.random() * (4096 - 128)) + 128)))}>
+          <button className="btn" id="result" onClick={() => {handleButtonClick("SUM");}}>
             <div>=</div>
           </button>
           </div>

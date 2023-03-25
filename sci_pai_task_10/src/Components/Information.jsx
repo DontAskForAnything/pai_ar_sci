@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from 'react';
 
-const Information = ({ historyValue  }) => {
-    const [valuesArray, setValuesArray] = useState([]);
-    const [current, setCurrent] = useState()
+const Information = ({ historyValue, history, calculate  }) => {    const [current, setCurrent] = useState()
 
     useEffect(() => {
-      if(isNaN(parseInt(historyValue))){
-        if(current){
-          setValuesArray([...valuesArray, current,historyValue]);
-          setCurrent()
+      if(historyValue === "SUM"){
+        if(!isNaN(parseInt(current))){
+          history.push(current);
+          setCurrent();
+          calculate();
+          history.splice(0,history.length)
         }
       }else{
-        setCurrent(historyValue)
+        if(isNaN(parseInt(historyValue))){
+          if(current){
+            history.push(current);
+            history.push(historyValue);
+            setCurrent()
+          }
+        }else{
+          setCurrent(historyValue)
+        }
       }
     }, [historyValue]);
 
   return (
     <div id='History'>
-      {valuesArray.map((el, index) =>{
+      {history.map((el, index) =>{
           return(
             <p key={index}>{el}</p>
           )
