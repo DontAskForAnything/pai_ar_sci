@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.bolder {
+  font-weight: bold;
+  color: white;
+}
+
+#app {
+  background-color: #303030;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app-container {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+
+  border-radius: 1rem;
+  width: 70vw;
+  display: flex;
+  max-width: 70rem;
+}
+
+/* Main */
+#main-part {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+  );
+  background-size: cover;
+  border-radius: 1rem;
+  
+  box-sizing: border-box;
+  padding: 5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* Current weather */
+.current-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.current-info h1 {
+  min-width: 0;
+  font-size: 6.5rem;
+  font-weight: 600;
+}
+
+.current-info h2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  margin-left: 2rem;
+  min-width: 0;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.current-info h2 .location-coords {
+  color: black;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+.current-info h2 .location-coords i {
+  margin-right: 0.2rem;
+}
+
+.current-info div {
+  margin-left: 2rem;
+  text-align: center;
+}
+.current-info div img {
+  filter: saturate(3);
+  width: 5rem;
+  height: 5rem;
+}
+.current-info div p {
+  font-size: 1rem;
+}
+
+/* Forecast */
+#forecast-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 12rem;
+  width: 100%;
+}
+#forecast-container .day {
+  color: white;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+  height: 9rem;
+  text-align: center;
+  width: 7rem;
+  border-radius: 1rem;
+  margin-bottom: 20rem;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#forecast-container .day h1 {
+  font-size: 1.1rem;
+}
+#forecast-container .day p i {
+  margin-left: 0.5rem;
+  font-size: 0.6rem;
+}
+#forecast-container .day p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+}
+
+#forecast-container .day img {
+  filter: saturate(3);
+  width: 6rem;
+  height: 6rem;
+}
+/* Scroll bar */
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3rem);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsibility */
+@media only screen and (max-width: 1000px) {
+    .current-info {flex-direction: column;}
+    .current-info h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin: 0;
+    }
+    .current-info div {margin: 0;}
+    .current-info div img {margin-top: 0;}
+    .location-coords {margin-top: 0.5rem;}
+    #main-part {padding: 2rem;}
+  }
+  @media only screen and (max-width: 600px) {
+    .current-info h2 {font-size: 1.6rem;}
+    .current-info h2 .location-coords {font-size: 0.9rem;}
+  }
+  @media only screen and (max-width: 490px) {
+    .current-info h2 {font-size: 1.3rem;}
+    .current-info h2 .location-coords {font-size: 0.8rem;}
+    .current-info h1 {font-size: 4rem;}
+    .current-info div img {
+      width: 4rem;
+      height: 4rem;
+    }
+    .current-info div p {font-size: 0.8rem;}
+  }
+  @media only screen and (max-width: 380px) {
+    .current-info * {display: none;}
+    .current-info h1 {display: flex;}
+  }
