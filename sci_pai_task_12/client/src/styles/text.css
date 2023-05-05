@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+
+h1 {
+  font-family: 'Long Cang', cursive;
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+}
+#addTaskFields {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  color: white;
+  text-align: center;
+}
+button[type='submit'] {
+  width: 100%;
+  background-color: rgb(125, 125, 125);
+  color: white;
+  font-weight: bolder;
+  height: 30px;
+  border-radius: 10px;
+  margin: 5px;
+  border: 0;
+}
+input[type='text']:focus {
+  outline: none;
+}
+input[type='text'] {
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(54, 54, 54);
+  height: 50px;
+  width: 70%;
+  border-radius: 10px;
+  margin: 5px;
+  border: 0;
+}
+#addTaskFields input[type='text']::placeholder {
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  #addTaskFields {
+    position: fixed;
+    height: 15vh;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    padding: 0px;
+    margin: 0;
+  }
+}
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-input__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-input__label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: #4245a8;
+  width: 20%;
+  height: 30px;
+  justify-content: center;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.truncate {
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides any content that exceeds the element's width */
+  text-overflow: ellipsis; /* Adds an ellipsis (...) to indicate truncated text */
+  width: 30ch; /* Sets the element's width to fit only 10 characters */
+}

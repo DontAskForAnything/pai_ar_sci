@@ -1,0 +1,157 @@
+.task {
+  text-align: left;
+  border: 0.1rem white solid;
+  position: relative;
+  color: white;
+  min-height: 30px;
+  padding: 5px;
+}
+.task .text {
+  overflow-wrap: break-word;
+  width: 70%;
+}
+.task .actions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: smaller;
+}
+.task .actions i:last-child {
+  margin-top: 5px;
+}
+.modal .close_button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 30px;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal h4 {
+  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.modal {
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+}
+.modalDetails .imageScale {
+  box-shadow: 0px 0px 50px rgba(181, 181, 181, 0.9);
+
+  max-height: 70vh;
+  max-width: 70vw;
+}
+.imgPreview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 40px;
+}
+.imgPreview img {
+  box-shadow: 0px 0px 50px rgba(181, 181, 181, 0.9);
+
+  max-height: 40vh;
+  max-width: 40vw;
+}
+.main {
+  text-align: center;
+  height: 20px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-color: #e4f6f3;
+  color: black;
+  font-weight: bold;
+
+  letter-spacing: 5px;
+}
+.droppable {
+  max-width: 250px;
+  width: 250px;
+  min-height: 200px;
+}
+
+#dragContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.tasksList {
+  text-align: center;
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .imgPreview {
+    display: none;
+  }
+  .tasksList {
+    margin-left: 0px;
+  }
+  .droppable {
+    max-width: 40vw;
+  }
+  #dragContainer {
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .actionButtonMobile {
+    visibility: hidden;
+  }
+}
+
+.actionButtonMobile {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+.currentTask {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.currentTask .imageScale {
+  margin-top: 1vh;
+  max-height: 30vh;
+  max-width: 30vw;
+}
+
+.currentTask p {
+  margin-top: 1vh;
+}
+
+.rightCorner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  font-size: 30px;
+}
